@@ -10,13 +10,13 @@
 #include "graphics.h" // 
 
 // === Настройки Wi-Fi ===
-const char* ssid = "Xiaomi 11T Pro";      // Имя вашей сети Wi-Fi
-const char* password = "77047704";        // Пароль от вашей сети
+const char* ssid = "Имя вашей сети Wi-Fi";      // Имя вашей сети Wi-Fi
+const char* password = "Пароль от вашей сети";        // Пароль от вашей сети
 
 // === Настройки OpenWeatherMap ===
-const String city = "Balakovo";           // Город
+const String city = "Город";           // Город
 const String countryCode = "RU";          // Код страны
-const String apiKey = "3baff29a869aace4240295d4b35a1757"; // Ваш API ключ
+const String apiKey = "Ваш API ключ"; // Ваш API ключ
 const String apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + countryCode + "&appid=" + apiKey + "&units=metric&lang=ru";
 
 // === OLED дисплей ===
@@ -287,7 +287,7 @@ void setup() {
 void loop() {
   unsigned long currentMillis = millis();
 
-  // === Обновляем данные с сайта раз в 60 секунд ===
+  // === Обновляем данные с сайта  ===
   if (currentMillis - lastUpdateTime >= updateInterval) {
     lastUpdateTime = currentMillis;
     getWeatherData(&internetTemp, &internetHumidity, &internetPressure, &internetWindSpeed, &sunriseTime, &sunsetTime);
